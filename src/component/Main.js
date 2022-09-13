@@ -17,7 +17,7 @@ class Main extends React.Component{
     }
     componentDidMount=()=>{
         axios
-        .get(`http://localhost:3001/news`)
+        .get(`http://localhost:3010/news`)
         .then(result=>{
             this.setState({
                 newsArray:result.data

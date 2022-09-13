@@ -1,14 +1,16 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import {Navbar,NavItem} from "react-bootstrap";
+import {Navbar} from "react-bootstrap";
 import  "../style/Header.css";
 import logo from '../assets/logo3.png';
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
+import Button from 'react-bootstrap/Button';
 
 
-function Header() {
+class Header extends React.Component {
+  render(){
 
 
   return (
@@ -46,16 +48,12 @@ function Header() {
                 className="fs-5 text-uppercase px-3 fw-bold" href="/contact">
                 Contact Us
               </Nav.Link>
-
-
-              <Nav.Link >
-              <LoginButton/>
-              </Nav.Link>
-
-              <Nav.Link>
-               <LogoutButton/>
-              </Nav.Link>
+              
+              <Button variant="dark"> <LoginButton/></Button>
              
+              <Button variant="dark"> <LogoutButton/></Button>
+         
+
               
           
             </Nav>
@@ -65,5 +63,6 @@ function Header() {
       </Navbar>
     </div>
   );
+}
 }
 export default Header;
